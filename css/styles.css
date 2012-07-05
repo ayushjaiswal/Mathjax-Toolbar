@@ -218,7 +218,10 @@ height:150px;
 }
 #check
 {
-margin-left:150px;
+margin-left:100px;
+}
+#check, #reset
+{
 margin-top:10px;
 padding: 5px;
 font-size:14pt;

@@ -150,3 +150,10 @@ var s="preview.php?content="+a;
 document.getElementById('previewbox').src =s;
 }
 
+function reset()
+{
+	var temp=document.getElementById('content');
+	temp.value="";
+	showPreview();
+}
+
