@@ -1,0 +1,972 @@
+<html>
+	<head>
+		<title>
+			Mathjax Toolbar
+		</title>
+		<link rel="stylesheet" type="text/css" href="css/styles.css"></style>
+		<script type="text/x-mathjax-config">
+			MathJax.Hub.Config({
+				extensions: ["tex2jax.js"],
+				jax: ["input/TeX","output/HTML-CSS"],
+				tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]},
+				TeX: { extensions: ["AMSmath.js","AMSsymbols.js"]}
+		  });
+		</script>
+		<script language="javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/mathjax/MathJax.js"></script>
+		<script type="text/javascript" src="js/mathjaxtoolbarjs.js"></script>
+	</head>
+	<body>
+		<div id="toolbar">
+			<input type="button" name="addmath" id="addmath" value="Math Expressions" />
+			<ul id="math">
+				<li id="helplinktoolbar" class="links terminator" onclick="">Help</li>
+				<li id="start" class="links terminator" onclick=insertAtCursor("\\[\nENTER\u0020MATH\u0020EXPRESSIONS\u0020HERE\n\\]")>Add Math</li>
+				<li id="functionslink" class="links">Functions</li>
+				<li id="operatorslink" class="links">Operators</li>
+				<li id="greeklowerslink" class="links">Greek Lowers</li>
+				<li id="greekupperslink" class="links">Greek Uppers</li>
+				<li id="bracketslink" class="links">Brackets</li>
+				<li id="arrowslink" class="links">Arrows</li>
+				<li id="setslink" class="links">Sets</li>
+				<li id="symbolslink" class="links">Symbols</li>
+				<li id="matrixlink" class="links">Matrices</li>
+				<li id="binarylink" class="links">Binary</li>
+				<li id="relationslink" class="links">Relations</li>
+			</ul>
+
+			<div id="operators" class="buttonlinks">
+				<table border="0">
+					<tr>
+						<td class="button" onclick=insertAtCursor("^{}") >
+						\[ x^{a} \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\int") >
+						\[ \int \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\bigcap") >
+						\[ \bigcap \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\sum") >
+						\[ \sum \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\prod") >
+						\[ \prod \]
+						</td>
+						<td class="button" onclick=insertAtCursor("_{}") >
+						\[
+						x_{a}
+						\]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\int_{}^{}") >
+						\[
+						\int_{a}^{b}
+						\]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\bigcap_{}^{}") >
+						\[
+						\bigcap_{a}^{b}
+						\]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\sum_{}^{}") >
+						\[
+						\sum_{a}^{b}
+						\]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\prod_{}^{}") >
+						\[
+						\prod_{a}^{b}
+						\]
+						</td>
+						<td class="button" onclick=insertAtCursor("_{}^{}") >
+						\[
+						x_{a}^{b}
+						\]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\frac{\\partial\u0020}{\\partial\u0020x}") >
+						\[
+						\frac{\partial }{\partial x}
+						\]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\oint") >
+						\[
+						\oint
+						\]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\bigcup") >
+						\[
+						\bigcup
+						\]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\sqrt{}") >
+						\[
+						\sqrt{\ }
+						\]
+						</td></tr><tr>
+						<td class="button" onclick=insertAtCursor("\\coprod") >
+						\[
+						\coprod 
+						\]
+						</td>
+						<td class="button" onclick=insertAtCursor("{_{}}^{}") >
+						\[
+						{x_{b}}^{a}
+						\]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\frac{\\partial^2\u0020}{\\partial\u0020x^2}") >
+						\[
+						\frac{\partial^2 }{\partial x^2}
+						\]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\oint_{}^{}") >
+						\[
+						\oint_{a}^{b}
+						\]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\bigcup_{}^{}") >
+						\[
+						\bigcup_{a}^{b}
+						\]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\sqrt[]{}") >
+						\[
+						\sqrt[n]{x}
+						\]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\coprod_{}^{}") >
+						\[
+						\coprod_{a}^{b}
+						\]
+						</td>
+						<td class="button" onclick=insertAtCursor("_{}^{}\\textrm{}") >
+						\[
+						_{a}^{b}\textrm{C}
+						\]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\frac{\\mathrm{d}\u0020}{\\mathrm{d}\u0020x}") >
+						\[
+						\frac{\mathrm{d} }{\mathrm{d} x}
+						\]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\iint_{}^{}") >
+						\[
+						\iint_{a}^{b}
+						\]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\iint_{}^{}") >
+						\[
+						\iint_{a}^{b}
+						\]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\lim_{}") >
+						\[
+						\lim_{}
+						\]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\frac{}{}") >
+						\[
+						\frac{a}{b}
+						\]
+						</td>
+						<td class="button" onclick=insertAtCursor("_{}^{}\\textrm{}") >
+						\[
+						_{x}^{y}\textrm{z}
+						\]
+						</td>
+					</tr>
+				</table>
+			</div>
+
+			<div id="greeklowers" class="buttonlinks">
+				<table border="0">
+					<tr>
+						<td class="button" onclick=insertAtCursor("\\alpha") >
+						\[ \alpha \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\beta") >
+						\[ \beta \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\gamma") >
+						\[ \gamma \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\delta") >
+						\[ \delta \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\epsilon") >
+						\[ \epsilon \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\varepsilon") >
+						\[
+						\varepsilon
+						\]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\zeta") >
+						\[
+						\zeta
+						\]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\eta") >
+						\[
+						\eta
+						\]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\theta") >
+						\[
+						\theta
+						\]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\vartheta") >
+						\[
+						\vartheta
+						\]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\iota") >
+						\[
+						\iota
+						\]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\kappa") >
+						\[
+						\kappa
+						\]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\lambda") >
+						\[
+						\lambda
+						\]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\mu") >
+						\[
+						\mu
+						\]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\nu") >
+						\[
+						\nu
+						\]
+						</td></tr><tr>
+						<td class="button" onclick=insertAtCursor("\\xi") >
+						\[
+						\xi
+						\]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\pi") >
+						\[
+						\pi
+						\]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\varpi") >
+						\[
+						\varpi
+						\]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\rho") >
+						\[
+						\rho
+						\]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\varrho") >
+						\[
+						\varrho
+						\]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\sigma") >
+						\[
+						\sigma
+						\]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\varsigma") >
+						\[
+						\varsigma
+						\]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\tau") >
+						\[
+						\tau
+						\]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\upsilon") >
+						\[
+						\upsilon
+						\]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\phi") >
+						\[
+						\phi
+						\]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\varphi") >
+						\[
+						\varphi
+						\]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\chi") >
+						\[
+						\chi
+						\]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\psi") >
+						\[
+						\psi
+						\]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\omega") >
+						\[
+						\omega
+						\]
+						</td>
+					</tr>
+				</table>
+			</div>
+
+			<div id="greekuppers" class="buttonlinks">
+				<table border="0">
+					<tr>
+						<td class="button" onclick=insertAtCursor("\\Gamma") >
+						\[ \Gamma \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\Delta") >
+						\[ \Delta \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\Theta") >
+						\[
+						\Theta
+						\]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\Lambda") >
+						\[
+						\Lambda
+						\]
+						</td>
+
+						<td class="button" onclick=insertAtCursor("\\Xi") >
+						\[
+						\Xi
+						\]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\Pi") >
+						\[
+						\Pi
+						\]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\Sigma") >
+						\[
+						\Sigma
+						\]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\Upsilon") >
+						\[
+						\Upsilon
+						\]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\Phi") >
+						\[
+						\Phi
+						\]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\Psi") >
+						\[
+						\Psi
+						\]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\Omega") >
+						\[
+						\Omega
+						\]
+						</td>
+					</tr>
+				</table>
+			</div>
+
+			<div id="brackets" class="buttonlinks">
+				<table border="0">
+					<tr>
+						<td class="button" onclick=insertAtCursor("\\left\u0020(\u0020\u0020\\right\u0020)") >
+						\[ \left (  \right ) \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\left\u0020\\{\u0020\u0020\\right\u0020\\}") >
+						\[ \left \{  \right \} \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\left\u0020[\u0020\u0020\\right\u0020]") >
+						\[ \left [  \right ] \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\left\u0020\\|\u0020\u0020\\right\u0020\\|") >
+						\[ \left \|  \right \| \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\left\u0020\\langle\u0020\u0020\\right\u0020\\rangle") >
+						\[ \left \langle  \right \rangle \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\left\u0020\\lfloor\u0020\u0020\\right\u0020\\rfloor") >
+						\[ \left \lfloor  \right \rfloor \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\left\u0020\\lceil\u0020\u0020\\right\u0020\\rceil") >
+						\[ \left \lceil  \right \rceil \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\left\u0020|\u0020\u0020\\right\u0020|") >
+						\[ \left |  \right | \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\left\u0020\{\u0020\u0020\right.") >
+						\[ \left \{ \right.  \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\left.\u0020\{\u0020\u0020\right") >
+						\[ \left.  \right \} \]
+						</td>
+					</tr>
+				</table>
+			</div>
+
+			<div id="arrows" class="buttonlinks">
+				<table border="0">
+					<tr>
+						<td class="button" onclick=insertAtCursor("x\u0020\\mapsto\u0020x^2") >
+						\[ x \mapsto x^2  \]
+						</td>
+						<td class="button" onclick=insertAtCursor("n\u0020\\to\u0020\\infty\u0020") >
+						\[ n \to \infty  \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\leftarrow") >
+						\[
+						\leftarrow
+						\]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\rightarrow") >
+						\[
+						\rightarrow
+						\]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\Leftarrow") >
+						\[
+						\Leftarrow
+						\]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\Rightarrow") >
+						\[
+						\Rightarrow
+						\]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\leftrightarrow") >
+						\[
+						\leftrightarrow
+						\]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\Leftrightarrow") >
+						\[
+						\Leftrightarrow
+						\]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\leftharpoonup") >
+						\[
+						\leftharpoonup
+						\]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\rightharpoonup") >
+						\[
+						\rightharpoonup
+						\]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\leftharpoondown") >
+						\[
+						\leftharpoondown
+						\]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\rightharpoondown") >
+						\[
+						\rightharpoondown
+						\]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\rightleftharpoons") >
+						\[
+						\rightleftharpoons
+						\]
+						</td></tr><tr>
+
+						<td class="button" onclick=insertAtCursor("\\overset{}{\\leftarrow}") >
+						\[
+						\overset{a}{\leftarrow}
+						\]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\overset{}{\\rightarrow}") >
+						\[
+						\overset{a}{\rightarrow}
+						\]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\underset{}{\\leftarrow}") >
+						\[
+						\underset{a}{\leftarrow}
+						\]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\underset{}{\\rightarrow}") >
+						\[
+						\underset{a}{\rightarrow}
+						\]
+						</td>
+					</tr>
+				</table>
+			</div>
+
+			<div id="matrix" class="buttonlinks">
+				<table border="0">
+					<tr>
+						<td class="button" onclick=insertAtCursor("\\begin{matrix}\n\u0020&\u0020\u0020&\u0020\\\\\n\u0020&\u0020\u0020&\u0020\\\\\n\u0020&\u0020\u0020&\u0020\n\\end{matrix}") >
+						\begin{matrix}
+						. & . & .\\ 
+						. & . & .\\ 
+						. & . & .
+						\end{matrix}
+						</td>
+						<td class="button" onclick=insertAtCursor("\\begin{bmatrix}\n\u0020&\u0020\u0020&\u0020\\\\\n\u0020&\u0020\u0020&\u0020\\\\\n\u0020&\u0020\u0020&\u0020\n\\end{bmatrix}") >
+						\begin{bmatrix}
+						. & . & .\\ 
+						. & . & .\\ 
+						. & . & .
+						\end{bmatrix}
+						</td>
+						<td class="button" onclick=insertAtCursor("\\begin{pmatrix}\n\u0020&\u0020\u0020&\u0020\\\\\n\u0020&\u0020\u0020&\u0020\\\\\n\u0020&\u0020\u0020&\u0020\n\\end{pmatrix}") >
+						\begin{pmatrix}
+						. & . & .\\ 
+						. & . & .\\ 
+						. & . & .
+						\end{pmatrix}
+						</td>
+						<td class="button" onclick=insertAtCursor("\\begin{vmatrix}\n\u0020&\u0020\u0020&\u0020\\\\\n\u0020&\u0020\u0020&\u0020\\\\\n\u0020&\u0020\u0020&\u0020\n\\end{vmatrix}") >
+						\begin{vmatrix}
+						. & . & .\\ 
+						. & . & .\\ 
+						. & . & .
+						\end{vmatrix}
+						</td>
+						<td class="button" onclick=insertAtCursor("\\begin{Bmatrix}\n\u0020&\u0020\u0020&\u0020\\\\\n\u0020&\u0020\u0020&\u0020\\\\\n\u0020&\u0020\u0020&\u0020\n\\end{Bmatrix}") >
+						\begin{Bmatrix}
+						. & . & .\\ 
+						. & . & .\\ 
+						. & . & .
+						\end{Bmatrix}
+						</td>
+						<td class="button" onclick=insertAtCursor("\\begin{Vmatrix}\n\u0020&\u0020\u0020&\u0020\\\\\n\u0020&\u0020\u0020&\u0020\\\\\n\u0020&\u0020\u0020&\u0020\n\\end{Vmatrix}") >
+						\begin{Vmatrix}
+						. & . & .\\ 
+						. & . & .\\ 
+						. & . & .
+						\end{Vmatrix}
+						</td>
+						<td class="button" onclick=insertAtCursor("\\binom{}{}") >
+						\[ \binom{n}{r} \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\begin{cases}\n\u0020&\u0020\\text{\u0020if\u0020}\u0020x=\u0020\\\\\\\n\u0020&\u0020\\text{\u0020if\u0020}\u0020x=\u0020\\\\\\\n\u0020&\u0020\\text{\u0020if\u0020}\u0020x=\u0020\n\\end{cases}") >
+						\[ \begin{cases}
+						 & \text{ if } x= \\ 
+						 & \text{ if } x= \\ 
+						 & \text{ if } x= 
+						\end{cases} \]
+						</td>
+					</tr>
+				</table>
+			</div>
+
+			<div id="binary" class="buttonlinks">
+				<table border="0">
+					<tr>
+						<td class="button" onclick=insertAtCursor("\\pm") >
+						\[ \pm \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\mp") >
+						\[ \mp \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\cap") >
+						\[ \cap \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\cup") >
+						\[ \cup \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\cdot") >
+						\[ \cdot \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\times") >
+						\[ \times \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\ast") >
+						\[ \ast \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\wedge") >
+						\[ \wedge \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\vee") >
+						\[ \vee \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\div") >
+						\[ \div \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\setminus") >
+						\[ \setminus \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\oplus") >
+						\[ \oplus \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\ominus") >
+						\[ \ominus \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\otimes") >
+						\[ \otimes \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\oslash") >
+						\[ \oslash \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\odot") >
+						\[ \odot \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\circleddash") >
+						\[ \circleddash \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\circledast") >
+						\[ \circledast \]
+						</td>
+					</tr>
+				</table>
+			</div>
+
+			<div id="relations" class="buttonlinks">
+				<table border="0">
+					<tr>
+						<td class="button" onclick=insertAtCursor("\\leq") >
+						\[ \leq \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\geq") >
+						\[ \geq \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\doteq") >
+						\[ \doteq \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\leqslant") >
+						\[ \leqslant \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\geqslant") >
+						\[ \geqslant \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\equiv") >
+						\[ \equiv \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\nless") >
+						\[ \nless \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\ngtr") >
+						\[ \ngtr \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\neq") >
+						\[ \neq \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\nleqslant") >
+						\[ \nleqslant \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\ngeqslant") >
+						\[ \ngeqslant \]
+						</td>
+						</td>
+						<td class="button" onclick=insertAtCursor("\\not\\equiv") >
+						\[ \not\equiv \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\sim") >
+						\[ \sim \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\ll") >
+						\[ \ll \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\gg") >
+						\[ \gg \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\approx") >
+						\[ \approx \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\simeq") >
+						\[ \simeq \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\cong") >
+						\[ \cong \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\propto") >
+						\[ \propto \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\parallel") >
+						\[ \parallel \]
+						</td>
+					</tr>
+				</table>
+			</div>
+
+			<div id="sets" class="buttonlinks">
+				<table border="0">
+					<tr>
+						<td class="button" onclick=insertAtCursor("\\sqsubset") >
+						\[ \sqsubset \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\sqsupset") >
+						\[ \sqsupset \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\sqsubseteq") >
+						\[ \sqsubseteq \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\sqsupseteq") >
+						\[ \sqsupseteq \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\subset") >
+						\[ \subset \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\supset") >
+						\[ \supset \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\subseteq") >
+						\[ \subseteq \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\supseteq") >
+						\[ \supseteq \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\nsubseteq") >
+						\[ \nsubseteq \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\nsupseteq") >
+						\[ \nsupseteq \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\subseteqq") >
+						\[ \subseteqq \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\supseteqq") >
+						\[ \supseteqq \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\nsubseteqq") >
+						\[ \nsubseteqq \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\nsupseteqq") >
+						\[ \nsupseteqq \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\in") >
+						\[ \in \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\ni") >
+						\[ \ni \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\notin") >
+						\[ \notin \]
+						</td>
+					</tr>
+				</table>
+			</div>
+
+			<div id="symbols" class="buttonlinks">
+				<table border="0">
+					<tr>
+						<td class="button" onclick=insertAtCursor("\\therefore") >
+						\[ \therefore \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\partial") >
+						\[ \partial \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\mathbb{P}") >
+						\[ \mathbb{P} \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\angle") >
+						\[ \angle \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\measuredangle") >
+						\[ \measuredangle \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\mathbb{N}") >
+						\[ \mathbb{N} \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\imath") >
+						\[ \imath \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\because") >
+						\[ \because \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\cdots") >
+						\[ \cdots \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\jmath") >
+						\[ \jmath \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\mathbb{Z}") >
+						\[ \mathbb{Z} \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\sphericalangle") >
+						\[ \sphericalangle \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\varnothing") >
+						\[ \varnothing \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\mathbb{I}") >
+						\[ \mathbb{I} \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\Re") >
+						\[ \Re \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\ddots") >
+						\[ \ddots \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\vdots") >
+						\[ \vdots \]
+						</td></tr><tr>
+						<td class="button" onclick=insertAtCursor("\\Im") >
+						\[ \Im \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\mathbb{Q}") >
+						\[ \mathbb{Q} \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\infty") >
+						\[ \infty \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\mho") >
+						\[ \mho \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\mathbb{R}") >
+						\[ \mathbb{R} \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\forall") >
+						\[ \forall \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\S") >
+						\[ \S \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\exists") >
+						\[ \exists \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\mathbb{C}") >
+						\[ \mathbb{C} \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\wp") >
+						\[ \wp \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\top") >
+						\[ \top \]
+						</td>
+					</tr>
+				</table>
+			</div>
+
+			<div id="functions" class="buttonlinks">
+				<table border="0">
+					<tr>
+						<td class="button" onclick=insertAtCursor("\\sin") >
+						sin
+						</td>
+						<td class="button" onclick=insertAtCursor("\\cos") >
+						cos
+						</td>
+						<td class="button" onclick=insertAtCursor("\\tan") >
+						tan
+						</td>
+						<td class="button" onclick=insertAtCursor("\\csc") >
+						cosec
+						</td>
+						<td class="button" onclick=insertAtCursor("\\sec") >
+						sec
+						</td>
+						<td class="button" onclick=insertAtCursor("\\cot") >
+						cot
+						</td>
+						<td class="button" onclick=insertAtCursor("\\sinh") >
+						sinh
+						</td>
+						<td class="button" onclick=insertAtCursor("\\cosh") >
+						cosh
+						</td>
+						<td class="button" onclick=insertAtCursor("\\tanh") >
+						tanh
+						</td>
+						<td class="button" onclick=insertAtCursor("\\coth") >
+						coth
+						</td></tr><tr>
+						<td class="button" onclick=insertAtCursor("\\arcsin") >
+						arcsin
+						</td>
+						<td class="button" onclick=insertAtCursor("\\arccos") >
+						arccos
+						</td>
+						<td class="button" onclick=insertAtCursor("\\arctan") >
+						arctan
+						</td>
+						<td class="button" onclick=insertAtCursor("\\sin^{-1}") >
+						sin<sup>-1</sup>
+						</td>
+						<td class="button" onclick=insertAtCursor("\\cos^{-1}") >
+						cos<super>-1</super>
+						</td>
+						<td class="button" onclick=insertAtCursor("\\tan^{-1}") >
+						tan<sup>-1</sup>
+						</td>
+						<td class="button" onclick=insertAtCursor("\\sinh^{-1}") >
+						sinh<sup>-1</sup>
+						</td>
+						<td class="button" onclick=insertAtCursor("\\cosh^{-1}") >
+						cosh<sup>-1</sup>
+						</td>
+						<td class="button" onclick=insertAtCursor("\\tanh^{-1}") >
+						tanh<sup>-1</sup>
+						</td></tr><tr>
+						<td class="button" onclick=insertAtCursor("\\exp") >
+						exp
+						</td>
+						<td class="button" onclick=insertAtCursor("\\lg") >
+						lg
+						</td>
+						<td class="button" onclick=insertAtCursor("\\ln") >
+						ln
+						</td>
+						<td class="button" onclick=insertAtCursor("\\log") >
+						log
+						</td>
+						<td class="button" onclick=insertAtCursor("\\log_{}") >
+						log<sub>x</sub>
+						</td>
+						<td class="button" onclick=insertAtCursor("\\bar{}") >
+						\[ \bar{a} \]
+						</td>
+						<td class="button" onclick=insertAtCursor("\\vec{}") >
+						\[ \vec{a} \]
+						</td>
+						<td class="button" onclick=insertAtCursor("^{\\circ}") >
+						\[ a^{\circ} \]
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div id="math-code-help-container">
+			<div id="helpclose">X</div>
+			<div id="math-code-help">
+				<!--<h3 class="help">Adding code snippets to the post</h3>
+				<ol>
+					<li>Click on the 'Add code' button in the toolbar</li>
+					<li>Type the name of the language where mentioned in blocks</li>
+					<li>Type your code where mentioned in blocks</li>
+					<li>Non-code texts can be added above and/or below the code</li>
+				</ol>-->
+				<h3 class="help">Adding Math expressions</h3>
+				<ol>
+					<li>Click on the 'Add Math' button</li>
+					<li>Enter the expressions where mentioned in blocks</li>
+					<li>It is recommended to put different math expressions<br />in different &quot;Add Math&quot; sections</li>
+					<li>To close any box, press Esc (including this one)</li>
+				</ol>
+				<h3 class="help">Using Math expressions</h3>
+				<ul>
+					<li>It is recommended that you go through the basics of LaTeX from here: <a href="http://web.ift.uib.no/Teori/KURS/WRK/TeX/symALL.html" target="_blank">Link</a></li>
+					<li>Math expressions are categorised properly and the category names are listed as buttons on the toolbar</li>
+					<li>On clicking a category, various available expressions appear on the screen</li>
+					<li>Click on the expression that you want to enter; it will be added to your post at the position of the cursor</li>
+					<li>Fill in the gaps for constants or variables in the code that appears to get your desired expressions</li>
+					<li>Do not edit other parts of the code unless you have proper idea of what you are doing</li>
+					<li>The code that appears may be a little different from the actual Latex code for the expressions</li>
+				</ul>
+			</div>
+		</div>
+		<div id="message">
+			<b>To close any box of math symbols, press Esc</b><br />Insert Math Expressions Below and <br />Click on "Check!" to see the conversion Above
+		</div>
+		<div id="content-holder">
+			<textarea name="content" id="content" placeholder="Click on Math Expressions; Check out the Help section"></textarea>
+			<br /><input type="button" id="check" value="Check!" onclick=showPreview() />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		</div>
+		<div id="preview">
+			<iframe id="previewbox" href="preview.php"/>
+		</div>
+	</body>
+</html>

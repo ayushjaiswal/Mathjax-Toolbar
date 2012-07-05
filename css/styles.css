@@ -1,0 +1,229 @@
+body
+{
+background:#E6E6E6;
+}
+#toolbar
+{
+padding: 12px;
+font-size: 14px;
+background: white;
+margin: 25px 0 0 10px;
+width: 175px;
+color: #E6E6E6;
+border: 1px solid;
+border-radius: 7px;
+-moz-border-radius: 7px;
+}
+/*.button{cursor:default; background:yellow; border-style:solid;
+ border-color:red; border-width:1px;margin:1px;}
+.button:clicked{border-color:black;}*/
+#operators td,#matrix td,#functions td{font-size:12pt;}
+input[type="button"], input[type='submit']
+{
+background: #1F9EF6;
+color: white;
+border-style: solid;
+border-color: #E6E6E6;
+border-width: 2px;
+border-radius: 5px;
+cursor: pointer;
+}
+#addmath
+{
+padding: 7px;
+padding-right: 14px;
+font-size: 14pt;
+}
+#math {
+list-style: none;
+text-align: left;
+width: 100%;
+margin: 10px 10px 0 0;
+padding: 0;
+}
+
+.links {
+cursor: pointer;
+font-size: 10pt;
+color: #333;
+padding: 4px !important;
+background: white;
+margin: 4px;
+border-style: solid;
+border-radius: 5px;
+border-color: #F2F2F2;
+}
+.terminator {
+border-color: #81BEF7 !important;
+}
+table {
+display: table;
+border-collapse: separate;
+border-spacing: 2px;
+border-color: gray;
+}
+.buttonlinks td {
+font-size: 18pt;
+color: black;
+}
+.button {
+cursor: pointer;
+background: white;
+border-style: solid;
+border-radius: 5px;
+border-color: #FAFAFA;
+border-width: 1px;
+margin: 1px;
+}
+.button:hover {
+color: #81BEF7;
+}
+.links:hover {
+color: #81BEF7;
+}
+.buttonlinks {
+display: none;
+position: fixed;
+top: 30%;
+left: 28%;
+z-index: 1000;
+background: rgba(240, 238, 238, 0.60);
+padding: 20px;
+border: 3px solid white;
+border-radius: 7px;
+border-image: initial;
+}
+#operators td, #matrix td, #functions td {
+font-size: 12pt;
+}
+
+#math-code-help-container {
+position: fixed;
+top: 28%;
+left: 18%;
+width: 50%;
+height: 50%;
+background: rgba(216, 216, 216, 0.3);
+border-style: solid;
+border-color: white;
+border-width: 3px;
+border-radius: 7px;
+display: none;
+z-index: 10000;
+padding-bottom: 22px;
+padding-right: 0px;
+}
+#math-code-help {
+background: white;
+border-style: solid;
+border-color: #F2F2F2;
+border-width: 5px;
+border-radius: 7px;
+height: 95%;
+width: 93%;
+margin: 10px 0 0 12px;
+overflow-y: scroll;
+padding: 5px;
+color: #424242;
+font-size: 12pt;
+}
+.help {
+text-align: center;
+text-decoration: underline;
+color: #1F9EF6;
+font-weight: normal;
+font-size: 15pt;
+}
+#math-code-help a {
+text-decoration: underline;
+}
+#helpclose {
+float: right;
+width: 5px;
+margin: 0px;
+padding: 0 10px 0 5px;
+background: #E6E6E6;
+cursor: pointer;
+font-weight: bolder;
+border-style: solid;
+border-color: #2E2E2E;
+border-width: 1px;
+}
+#math-code-help::-webkit-scrollbar {
+width: 10px;
+height: 10px;
+}
+
+#math-code-help::-webkit-scrollbar-button:start:decrement,
+#math-code-help::-webkit-scrollbar-button:end:increment  {
+height: 30px;
+display: block;
+background-color: transparent;
+}
+
+#math-code-help::-webkit-scrollbar-track-piece  {
+background-color: #E6E6E6;
+border-radius: 6px;
+}
+
+#math-code-help::-webkit-scrollbar-thumb:vertical {
+height: 50px;
+background-color: #D8D8D8;
+border: 1px solid #eee;
+border-radius: 6px;
+}
+#content-holder
+{
+position: absolute;
+top:300px;
+left:400px;
+}
+#content
+{
+border-style: solid;
+border-color: #F2F2F2;
+border-width: 5px;
+border-radius: 7px;
+width:400px;
+height:150px;
+overflow-y: scroll;
+}
+#message
+{
+position: absolute;
+top:220px;
+left:400px;
+font: 12pt;
+text-align: center;
+padding-left:50px;
+}
+#preview
+{
+position: absolute;
+top:40px;
+left: 400px;
+width: 400px;
+height:150px;
+background: #ffffff;
+border-style: solid;
+border-color: #F2F2F2;
+border-width: 5px;
+border-radius: 7px;
+}
+#preview iframe
+{
+overflow:scroll;
+width:400px;
+height:150px;
+}
+#check
+{
+margin-left:150px;
+margin-top:10px;
+padding: 5px;
+font-size:14pt;
+}
+#MathJax_Message
+{
+display:none !important;
+}
