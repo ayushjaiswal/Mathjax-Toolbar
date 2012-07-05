@@ -931,7 +931,7 @@
 		</div>
 		<div id="math-code-help-container">
 			<div id="helpclose">X</div>
-			<div id="math-code-help">
+			<div id="math-code-help" class="closingBox">
 				<!--<h3 class="help">Adding code snippets to the post</h3>
 				<ol>
 					<li>Click on the 'Add code' button in the toolbar</li>
@@ -941,7 +941,7 @@
 				</ol>-->
 				<h3 class="help">Adding Math expressions</h3>
 				<ol>
-					<li>Click on the 'Add Math' button</li>
+					<li>Click on the &quot;Add Math&quot; button</li>
 					<li>Enter the expressions where mentioned in blocks</li>
 					<li>It is recommended to put different math expressions<br />in different &quot;Add Math&quot; sections</li>
 					<li>To close any box, press Esc (including this one)</li>
@@ -962,12 +962,12 @@
 			<b>To close any box of math symbols, press Esc</b><br />Insert Math Expressions Below and <br />Click on "Check!" to see the conversion Above
 		</div>
 		<div id="content-holder">
-			<textarea name="content" id="content" placeholder="Click on Math Expressions; Check out the Help section"></textarea>
+			<textarea name="content" id="content" class="closingBox" placeholder="Click on Math Expressions; Check out the Help section"></textarea>
 			<br /><input type="button" id="check" value="Check!" onclick=showPreview() />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			<input type="button" id="reset" value="Reset" onclick=reset() />
 		</div>
 		<div id="preview">
-			<iframe id="previewbox" href="preview.php"/>
+			<iframe id="previewbox" class="closingBox" href="preview.php"/>
 		</div>
 	</body>
 </html>

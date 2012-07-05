@@ -149,24 +149,24 @@ border-style: solid;
 border-color: #2E2E2E;
 border-width: 1px;
 }
-#math-code-help::-webkit-scrollbar {
+.closingBox::-webkit-scrollbar {
 width: 10px;
 height: 10px;
 }
 
-#math-code-help::-webkit-scrollbar-button:start:decrement,
-#math-code-help::-webkit-scrollbar-button:end:increment  {
+.closingBox::-webkit-scrollbar-button:start:decrement,
+.closingBox::-webkit-scrollbar-button:end:increment  {
 height: 30px;
 display: block;
 background-color: transparent;
 }
 
-#math-code-help::-webkit-scrollbar-track-piece  {
+.closingBox::-webkit-scrollbar-track-piece  {
 background-color: #E6E6E6;
 border-radius: 6px;
 }
 
-#math-code-help::-webkit-scrollbar-thumb:vertical {
+.closingBox::-webkit-scrollbar-thumb:vertical {
 height: 50px;
 background-color: #D8D8D8;
 border: 1px solid #eee;
@@ -187,6 +187,8 @@ border-radius: 7px;
 width:400px;
 height:150px;
 overflow-y: scroll;
+resize:none;
+padding:5px;
 }
 #message
 {
