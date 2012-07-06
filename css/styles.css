@@ -148,6 +148,7 @@ font-weight: bolder;
 border-style: solid;
 border-color: #2E2E2E;
 border-width: 1px;
+display:none;
 }
 .closingBox::-webkit-scrollbar {
 width: 10px;
