@@ -1,6 +1,3 @@
-<?php
-session_start();
-?>
 <html>
 	<head>
 		<script type="text/x-mathjax-config">
