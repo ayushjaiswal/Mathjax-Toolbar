@@ -1,11 +1,5 @@
 function insertAtCursor(myValue) {
 var myField=document.getElementById("content");
-if(myField==null)
-myField=document.getElementById("comment");
-if(myField==null)
-myField=document.getElementById("qcontent");
-if(myField==null)
-myField=document.getElementById("acontent");
     //IE support
     if (document.selection) {
         myField.focus();
