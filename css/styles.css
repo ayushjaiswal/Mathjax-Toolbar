@@ -27,6 +27,7 @@ input[type="button"], input[type='submit']
 	border-width: 2px;
 	border-radius: 5px;
 	cursor: pointer;
+	outline: none;
 }
 #addmath
 {
